@@ -5,8 +5,6 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 @Component({
   selector: 'app-footer',
   imports: [
-    NgOptimizedImage,
-    RouterOutlet,
     RouterLink,
     RouterLinkActive
   ],

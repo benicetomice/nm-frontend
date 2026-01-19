@@ -4,22 +4,22 @@ footer {
   width: 100%;
 }
 
-.social, .nav{
+.social, nav{
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 .social img{
   height: 45px;
-  padding: 5px 10px;
+  padding: 0 5px;
 }
 
-.nav img{
+nav img{
   max-height: 45px;
-  padding: 10px 23px;
+  padding: 10px 23px 10px 10px;
 }
 
-.nav a.active img {
+nav a.active img {
   filter: brightness(0) saturate(100%) invert(88%) sepia(18%) saturate(400%) hue-rotate(10deg);
 }
 
