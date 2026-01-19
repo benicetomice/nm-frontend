@@ -9,4 +9,5 @@ form {
 input, textarea {
   padding: 8px;
   font-size: 14px;
+  opacity: 50%;
 }
