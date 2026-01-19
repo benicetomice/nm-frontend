@@ -1,14 +1,26 @@
 import { Component } from '@angular/core';
-import {LiveGig} from '../../components/live-gig/live-gig';
+import { GigOverview } from '../../components/gig-overview/gig-overview';
+import { Gig } from '../../components/gig.model';
 
 @Component({
   selector: 'app-live',
   imports: [
-    LiveGig
+    GigOverview
   ],
   templateUrl: './live.html',
   styleUrl: './live.css',
 })
 export class Live {
-
+  gigs: Gig[] = [
+    {
+      date: '2026-02-01',
+      venue: 'Club X',
+      city: 'Berlin'
+    },
+    {
+      date: '2026-03-15',
+      venue: 'Halle Y',
+      city: 'Hamburg'
+    }
+  ];
 }

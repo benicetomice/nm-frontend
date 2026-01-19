@@ -1,1 +1,8 @@
-<h1>LIVE</h1>
+<section>
+  <h1>LIVE</h1>
+<div>
+  @for (g of gigs; track g.date) {
+    <app-gig-overview [gig]="g" />
+  }
+</div>
+</section>

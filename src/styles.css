@@ -1,35 +1,57 @@
 @import "tailwindcss";
 
-html, body {
-  color: yellow;
-  text-align: center;
-  align-content: center;
-  height: 100%;
-  margin: 0;
+/* Base */
+
+:root {
+  --font-base: 'Inter', Arial, serif;
+  --font-heading: 'Poppins', serif;
 }
 
-#bg-container {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  overflow: hidden;
+html {
+  height: 100%;
 }
+
+body {
+  min-height: 100%;
+  margin: 0;
+  font-family: var(--font-base), serif;
+  color: #969577;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 0.5em 0;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.8rem; }
+
+div {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ /* Background-Image */
 
 .bg-layer {
   position: absolute;
-  inset: 0;
+}
+.bg-home, .bg-default {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0;
 }
 
 .bg-home {
-background-image: url("/bg-home.jpg");
-  background-size: cover;
+  background-image: url("/bg-home.jpg");
 }
 
 .bg-default {
   background-image: url("/bg-default.jpg");
-  background-size: cover;
 }
