@@ -9,7 +9,7 @@ import {NotFound} from './pages/not-found/not-found';
 
 export const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: Home,
     title: 'Home',
     data: { bgClass: 'bg-home' }

@@ -4,7 +4,7 @@
 
 :root {
   --font-base: 'Inter', Arial, serif;
-  --font-heading: 'Poppins', serif;
+  --font-heading: 'Libre Baskerville', serif;
 }
 
 html {
@@ -14,12 +14,12 @@ html {
 body {
   min-height: 100%;
   margin: 0;
-  font-family: var(--font-base);
+  font-family: var(--font-base), 'sans-serif';
   color: #969577;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+  font-family: var(--font-heading), 'serif';
   text-transform: uppercase;
   font-weight: 600;
   line-height: 1.2;
@@ -29,6 +29,10 @@ h1, h2, h3, h4, h5, h6 {
 h1 { font-size: 3rem; }
 h2 { font-size: 2.2rem; }
 h3 { font-size: 1.8rem; }
+
+a {
+  color: var(--font-heading);
+  text-decoration: none; }
 
 div {
   padding: 2rem;
