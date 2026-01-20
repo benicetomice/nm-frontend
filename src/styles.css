@@ -34,6 +34,10 @@ a {
   color: var(--font-heading);
   text-decoration: none; }
 
+a:hover {
+  color: #deddb0;
+}
+
 div {
   padding: 2rem;
   display: flex;
