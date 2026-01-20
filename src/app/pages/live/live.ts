@@ -13,14 +13,29 @@ import { Gig } from '../../components/gig.model';
 export class Live {
   gigs: Gig[] = [
     {
-      date: '2026-02-01',
-      venue: 'Club X',
-      city: 'Berlin'
+      date: '03-11-2025',
+      venue: 'Musikscheune',
+      city: 'Worpswede'
     },
     {
-      date: '2026-03-15',
-      venue: 'Halle Y',
-      city: 'Hamburg'
+      date: '22-12-2025',
+      venue: 'Meisenfrei',
+      city: 'Bremen'
+    },
+    {
+      date: '22-12-2024',
+      venue:'Cadillack',
+      city: 'Oldenburg'
+    },
+    {
+      date: '05-12-2024',
+      venue:'Musikscheune',
+      city: 'Worpswede'
+    },
+    {
+      date: '22-12-2024',
+      venue:'Leer Open Air',
+      city: 'Leer'
     }
   ];
 }
