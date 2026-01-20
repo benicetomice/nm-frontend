@@ -1,8 +1,4 @@
 div {
-  width: 90%;
-  max-width: 900px;
-  margin: 40px auto; /* Zentriert auf der Seite */
   padding: 20px;
-  font-size: 0.9em;
-  line-height: 1.6;
+  line-height: 2;
 }
