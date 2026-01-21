@@ -8,11 +8,9 @@
 }
 
 html {
-  height: 80%;
 }
 
 body {
-  min-height: 100%;
   margin: 0;
   font-family: var(--font-base), 'sans-serif';
   font-size: var(--font-heading);
