@@ -1,7 +1,11 @@
 footer {
   position: sticky;
-  bottom: 30px;
+  bottom: 0;
+  padding: 16px;
   width: 100%;
+  background: #000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 1%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.1) 80%);
+
 }
 
 .social, nav{
@@ -10,17 +14,25 @@ footer {
   justify-content: center;
 }
 .social img{
-  height: 45px;
+  height: 40px;
   padding: 0 5px;
-}
-
-nav img{
-  max-height: 45px;
-  padding: 10px 23px 10px 10px;
 }
 
 nav a.active img {
   filter: brightness(0) saturate(100%) invert(88%) sepia(18%) saturate(400%) hue-rotate(10deg);
+}
+nav a{
+
+  color: #785444;
+  padding: 10px 23px 10px 10px;
+}
+
+nav a.active{
+  color: #deddb0;
+}
+
+nav a:hover{
+  color: #deddb0;
 }
 
 
