@@ -1,12 +1,54 @@
-/*.example-action-buttons {*/
-/*  padding-bottom: 20px;*/
-/*}*/
+:host {
+  display: flex;
+  justify-content: center;
+}
+[ngTabs] {
+  overflow: hidden;
+  width: 600px;
+}
+[ngTabList] {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  position: relative;
+}
 
-/*.example-headers-align .mat-expansion-panel-header-description {*/
-/*  justify-content: space-between;*/
-/*  align-items: center;*/
-/*}*/
+[ngTab] {
+  flex: 1;
+  outline: none;
+  padding: 0.75rem 0;
+  cursor: pointer;
+  text-align: center;
+}
+[ngTab]:hover{
+  color: #deddb0;
+}
+[ngTab][aria-selected='false']:focus {
+  outline-offset: -8px;
+  border-radius: 0.7rem;
+}
 
-/*.example-headers-align .mat-mdc-form-field + .mat-mdc-form-field {*/
-/*  margin-left: 8px;*/
-/*}*/
+[ngTab][aria-selected='true'] {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.sliding-window {
+  width: 100%;
+  display: flex;
+  transition: all 0.2s ease-in-out;
+}
+[ngTabList]:has([ngTab]:nth-child(1)[aria-selected='true']) ~ .sliding-window {
+  transform: translateX(0%);
+}
+[ngTabList]:has([ngTab]:nth-child(2)[aria-selected='true']) ~ .sliding-window {
+  transform: translateX(-99.999%);
+}
+[ngTabPanel] {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  min-height: 100px;
+  flex: 1;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
