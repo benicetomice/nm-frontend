@@ -1,59 +1,93 @@
-# NukingMoose
+# Nuking Moose Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.5.
+Nuking Moose is a fullstack-oriented web platform developed with Angular (v21),
+designed for future extension with a Spring Boot backend.
+The project focuses on clean architecture, RESTful APIs,
+and maintainable frontend–backend separation,
+including planned admin tools for dynamic content management.
 
-## Development server
+This project serves as a continuously evolving portfolio project -
+demonstrating modern web development practices and fullstack architecture design.
 
-To start a local development server, run:
+## Tech Stack
 
+### Frontend
+- Angular 21
+- TypeScript
+- Java (Spring Boot)
+- HTML5 / CSS3
+- Angular Router
+- Reactive Forms
+
+### Backend (planned)
+- Java
+- Spring Boot
+- RESTful APIs
+- Spring Security
+- JPA / Hibernate
+
+### Tooling & Workflow
+- Git / GitHub
+- Modular project structure
+- Incremental feature development
+
+## Core Features
+
+### Current
+- Modular Angular application
+- Compenent-based UI architecture
+- Routing and navigation structure
+- Responsive layout
+- Continuous development with frequent commits
+
+### Planned
+- Spring Boot backend
+- REST API for content management
+- Admin dashboard for site owner
+- Secure authentication and authorization
+- Persistent data storage
+
+## Architrecture Overview
+
+The project follows a clear separation of concerns:
+
+- Frontend: Angular application responsible for UI, user interaction and client-side logic
+- Backend (planned): Spring Boot application providing RESTful services
+- Communication: JSON-based REST API
+
+The architecutre is designed to allow independent development and scaling of frontend and backend components.
+
+## Roadmap
+- [x] Angular application setup
+- [x] Core UI structure and routing
+- [ ] Backend project setup (Spring Boot)
+- [ ] REST API design
+- [ ] Admin authentication
+- [ ] Content management features
+
+## Local Development
+
+### Prerequisites
+- Node.js
+- Angular CLI
+
+### Setup
 ```bash
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+the application will be available at:
+https://nukingmoose.com
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## License
 
-```bash
-ng generate component component-name
+```md
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## License
 
-```bash
-ng generate --help
-```
+MIT License
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
