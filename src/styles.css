@@ -7,10 +7,12 @@
   --font-heading: 'Libre Baskerville', serif;
 }
 
-html {
-  height: 90%;
-
-}
+.libre-baskerville-main-font {
+                      font-family: "Libre Baskerville", serif;
+                      font-optical-sizing: auto;
+                      font-weight: 400;
+                      font-style: normal;
+                    }
 
 body {
   font-family: var(--font-base), 'sans-serif';
@@ -24,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading), 'serif';
   text-transform: uppercase;
   text-align: center;
-  font-weight: 340;
+  /*font-weight: 340;*/
   line-height: 1.2;
   margin: 0.5em 0;
 }
