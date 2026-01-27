@@ -8,9 +8,6 @@ including planned admin tools for dynamic content management.
 
 This project serves as a continuously evolving portfolio project -
 demonstrating modern web development practices and fullstack architecture design.
-
-## Tech Stack
-
 ### Frontend
 - Angular 21
 - TypeScript
@@ -18,14 +15,12 @@ demonstrating modern web development practices and fullstack architecture design
 - HTML5 / CSS3
 - Angular Router
 - Reactive Forms
-
 ### Backend (planned)
 - Java
 - Spring Boot
 - RESTful APIs
 - Spring Security
 - JPA / Hibernate
-
 ### Tooling & Workflow
 - Git / GitHub
 - Modular project structure
@@ -85,7 +80,6 @@ https://nukingmoose.com
 ## License
 
 ```md
-```
 
 ## License
 
