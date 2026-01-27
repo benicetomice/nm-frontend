@@ -7,7 +7,7 @@
   --font-heading: 'Libre Baskerville', serif;
 }
 
-html,body {
+html {
   height: 90%;
 
 }
@@ -48,12 +48,12 @@ a:hover {
 .main {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  flex-grow: 1;
+
   text-align: center;
-  /*border: 1px solid white;*/
+  border: 1px solid white;
   padding: 2rem;
   margin-top: 10vh;
+  height: calc(100vh - 16px);
 }
 
 /* Background-Image */
