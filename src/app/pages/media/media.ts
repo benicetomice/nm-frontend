@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {MediaVideos} from '../../components/media-videos/media-videos';
 import {Tab, Tabs, TabList, TabPanel, TabContent} from '@angular/aria/tabs';
+import {MediaPictures} from '../../components/media-pictures/media-pictures';
 
 
 @Component({
@@ -11,7 +12,8 @@ import {Tab, Tabs, TabList, TabPanel, TabContent} from '@angular/aria/tabs';
     Tab,
     Tabs,
     TabPanel,
-    TabContent
+    TabContent,
+    MediaPictures
   ],
   templateUrl: './media.html',
   styleUrl: './media.css',
