@@ -1,0 +1,15 @@
+@for (g of upcomingGigs; track g.date) {
+  <app-gig-item
+    [gig]="g"
+    class="upcoming"
+    />
+}
+
+<hr>
+
+@for (g of pastGigs; track g.date) {
+  <app-gig-item
+    [gig]="g"
+    class="past"
+  />
+}

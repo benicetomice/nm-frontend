@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GigOverview } from './gig-overview';
+import { GigListComponent } from './gig-list.component';
 
-describe('GigOverview', () => {
-  let component: GigOverview;
-  let fixture: ComponentFixture<GigOverview>;
+describe('GigListComponent', () => {
+  let component: GigListComponent;
+  let fixture: ComponentFixture<GigListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GigOverview]
+      imports: [GigListComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GigOverview);
+    fixture = TestBed.createComponent(GigListComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
