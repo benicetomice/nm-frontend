@@ -1,0 +1,33 @@
+<div class="modal-backdrop" (click)="close.emit()"></div>
+
+<div class="modal">
+  <div class="modal-content">
+    <div class="close-container">
+      <button (click)="close.emit()">×</button>
+    </div>
+
+    <div class="leftContainer">
+
+      @if (gig.flyerImg) {
+        <img [src]="gig.flyerImg" alt="Flyer Image"/>
+      }
+
+    </div>
+    <div class="rightContainer">
+
+      <h2>{{ gig.venue }} – {{ gig.city }}</h2>
+
+      <p><strong>Einlass:</strong> {{ gig.doors }}</p>
+      <p><strong>Beginn:</strong> {{ gig.start }}</p>
+      <p><strong>Preis:</strong> {{ gig.price }} €</p>
+
+      @if (gig.acts?.length) {
+        <ul>
+          @for (act of gig.acts; track act) {
+            <li>{{ act }}</li>
+          }
+        </ul>
+      }
+    </div>
+  </div>
+</div>
