@@ -17,7 +17,7 @@
 body {
   font-family: var(--font-base), 'sans-serif';
   font-size: var(--font-heading);
-  color: #785444;;
+  color: #806559;;
 }
 
 /* Ueberschriften */
@@ -40,8 +40,8 @@ a {
   color: var(--font-heading);
   text-decoration: none; }
 
-a:hover {
-  color: #deddb0;
+nav a.active, a:hover{
+  color: #998992;
 }
 
 /* Main Content */
