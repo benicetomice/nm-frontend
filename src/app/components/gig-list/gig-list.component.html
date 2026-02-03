@@ -4,9 +4,10 @@
     class="upcoming"
     (selected)="openGig($event)"
     />
+  <hr>
 }
 
-<hr>
+
 
 @for (g of pastGigs; track g.date) {
   <app-gig-item
