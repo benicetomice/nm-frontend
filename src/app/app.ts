@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {ActivatedRoute, NavigationEnd, Router, RouterOutlet} from '@angular/router';
 import {Footer} from './components/footer/footer';
 import {filter} from 'rxjs';

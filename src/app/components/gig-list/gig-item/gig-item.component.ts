@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import { Gig } from '../../gig.model';
+import {Gig} from '../../gig.model';
 import {DatePipe} from '@angular/common';
 
 @Component({
