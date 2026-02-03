@@ -2,6 +2,7 @@
   <app-gig-item
     [gig]="g"
     class="upcoming"
+    (selected)="openGig($event)"
     />
 }
 
@@ -11,5 +12,13 @@
   <app-gig-item
     [gig]="g"
     class="past"
+    (selected)="openGig($event)"
+  />
+}
+
+@if (selectedGig) {
+  <app-gig-item-overview
+    [gig]="selectedGig"
+    (close)="closeGig()"
   />
 }

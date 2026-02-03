@@ -4,14 +4,12 @@ export interface Gig {
   city: string;
   venue: string;
 
-
-
-  gigDoors: string;
-  gigBegin: string;
+  doors: string;
+  start: string;
 
   price: number;
 
-  acts: string[];
+  acts?: string[];
 
   flyerImg: string;
 
