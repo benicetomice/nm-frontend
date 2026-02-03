@@ -22,6 +22,7 @@
       <p><strong>Preis:</strong> {{ gig.price }} €</p>
 
       @if (gig.acts?.length) {
+        <p><strong>Andere Acts:</strong></p>
         <ul>
           @for (act of gig.acts; track act) {
             <li>{{ act }}</li>
