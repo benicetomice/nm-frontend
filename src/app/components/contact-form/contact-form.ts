@@ -24,10 +24,13 @@ export class ContactForm {
       'http://localhost:8080/api/contact',
       this.model
     ).subscribe({
-      next: () => alert('Die Nachricht wurde gesendet!'),
+      next: () => alert('Nachricht gesendet!'),
       error: (err) => {
-        console.error(err);
-        alert('Fehler beim Senden');
+        if (err.status === 400) {
+          alert('Bitte überprüfe deine Eingaben');
+        } else {
+          alert('Serverfehler')
+        }
       }
     });
   }

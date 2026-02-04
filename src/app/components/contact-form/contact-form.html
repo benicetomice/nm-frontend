@@ -8,7 +8,8 @@
 
     <label>
       E-Mail
-      <input type="email" name="email" [(ngModel)]="model.email" required>
+      <input type="email" name="email" [(ngModel)]="model.email" required
+      email #email="ngModel">
     </label>
 
     <label>
@@ -20,4 +21,5 @@
       Absenden
     </button>
   </form>
+
 </div>
