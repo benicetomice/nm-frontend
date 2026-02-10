@@ -9,7 +9,7 @@
     <label>
       E-Mail
       <input type="email" name="email" [(ngModel)]="model.email" required
-      email #email="ngModel">
+      email>
     </label>
 
     <label>
@@ -17,9 +17,16 @@
       <textarea name="message" [(ngModel)]="model.message" required></textarea>
     </label>
 
-    <button type="submit" [disabled]="!contactForm.valid">
+  <button type="submit" [disabled]="!contactForm.valid">
       Absenden
     </button>
+
+  @if (status === 'success') {
+    <p class="snackbar">Nachricht gesendet</p>
+  }
+  @if (status === 'error') {
+    <p class="snackbar">Fehler beim Senden</p>
+  }
   </form>
 
 </div>
