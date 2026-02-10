@@ -1,17 +1,19 @@
 import {Component} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {HttpClient} from '@angular/common/http';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contact-form',
-    imports: [
-        FormsModule
-    ],
+  imports: [
+    FormsModule,
+  ],
   templateUrl: './contact-form.html',
   styleUrl: './contact-form.css',
 })
 export class ContactForm {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private snackBar: MatSnackBar) {
+  }
 
   model = {
     name: '',
@@ -19,19 +21,21 @@ export class ContactForm {
     message: ''
   };
 
+  status: 'success' | 'error' | null = null;
+
   onSubmit() {
-    this.http.post(
-      'http://localhost:8080/api/contact',
-      this.model
-    ).subscribe({
-      next: () => alert('Nachricht gesendet!'),
-      error: (err) => {
-        if (err.status === 400) {
-          alert('Bitte überprüfe deine Eingaben');
-        } else {
-          alert('Serverfehler')
+    this.http.post('http://localhost:8080/api/contact', this.model)
+      .subscribe({
+        next: () => {
+          this.snackBar.open('Nachricht gesendet', 'OK', {
+            duration: 3000
+          });
+        },
+        error: () => {
+          this.snackBar.open('Fehler beim Senden', 'OK', {
+            duration: 4000
+          });
         }
-      }
-    });
+      });
   }
 }
