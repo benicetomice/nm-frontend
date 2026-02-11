@@ -1,0 +1,23 @@
+<div class="modal-backdrop" (click)="close.emit()"></div>
+
+<div class="modal">
+  <div class="modal-content">
+    <div class="close-container">
+      <button (click)="close.emit()"><h3>close</h3></button>
+    </div>
+
+    <div>
+
+      @if (pic.img) {
+        <img [src]="'picturesGig/' + pic.img" [alt]="pic.name"/>
+      }
+
+    </div>
+    <div class="description">
+      <p>{{ pic.name }}</p>
+      @if (pic.photographer) {
+        <p>Fotograf: {{pic.photographer}}</p>
+      }
+    </div>
+  </div>
+</div>

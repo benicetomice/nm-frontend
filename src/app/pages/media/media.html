@@ -1,26 +1,12 @@
 <div>
   <h1>Media</h1>
   <i>Jegliches Bild- und Videomaterial kann frei verwendet werden.</i>
-  <div ngTabs>
-    <div ngTabList selectionMode="explicit" selectedTab="videos">
-      <div ngTab value="videos">
-        <h3>Videos</h3>
-      </div>
-      <div ngTab value="pictures">
-        <h3>Bilder</h3>
-      </div>
-    </div>
-    <div class="sliding-window">
-      <div ngTabPanel [preserveContent]="true" value="videos">
-        <ng-template ngTabContent>
-          <app-media-videos></app-media-videos>
-        </ng-template>
-      </div>
-      <div ngTabPanel [preserveContent]="true" value="pictures">
-        <ng-template ngTabContent>
-          <app-media-pictures></app-media-pictures>
-        </ng-template>
-      </div>
-    </div>
-  </div>
+  <mat-tab-group>
+    <mat-tab label="Videos">
+      <app-media-videos></app-media-videos>
+    </mat-tab>
+      <mat-tab label="Bilder">
+        <app-media-pictures></app-media-pictures>
+    </mat-tab>
+  </mat-tab-group>
 </div>

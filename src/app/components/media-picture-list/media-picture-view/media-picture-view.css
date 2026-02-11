@@ -1,0 +1,37 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1000;
+}
+
+.close-container {
+  text-align: right;
+}
+
+.modal-content {
+  background: rgba(0,0,0,0.7);
+  padding: 10px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.modal img {
+  max-width: 90vw;
+  max-height: 50vh;
+  display: block;
+}
+
+.description {
+  text-align: left;
+  padding-top: 10px;
+}
+
+

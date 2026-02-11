@@ -1,0 +1,14 @@
+<div class="gallery">
+  @for (p of gigPictures; track p.id) {
+    <app-media-picture-item
+      [pic]="p"
+      (selected)="openPicture($event)">
+    </app-media-picture-item>
+  }
+</div>
+
+@if (selectedPic) {
+  <app-media-picture-view
+    [pic]="selectedPic"
+    (close)="closePicture()" />
+}
