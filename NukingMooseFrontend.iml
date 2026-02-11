@@ -5,6 +5,8 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/dist" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/public/Buttons" />
+      <excludeFolder url="file://$MODULE_DIR$/public/gigPlakate" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
