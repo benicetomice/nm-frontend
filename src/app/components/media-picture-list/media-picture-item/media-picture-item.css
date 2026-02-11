@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
