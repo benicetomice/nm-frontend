@@ -15,6 +15,9 @@
     </div>
     <div class="description">
       <p>{{ pic.name }}</p>
+      @if (pic.photographer) {
+        <p>Fotograf: {{pic.photographer}}</p>
+      }
     </div>
   </div>
 </div>
