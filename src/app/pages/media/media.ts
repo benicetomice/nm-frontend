@@ -1,19 +1,16 @@
 import {Component} from '@angular/core';
-import {MediaVideos} from '../../components/media-videos/media-videos';
-import {Tab, Tabs, TabList, TabPanel, TabContent} from '@angular/aria/tabs';
-import {MediaPictures} from '../../components/media-pictures/media-pictures';
+import {MediaVideoList} from '../../components/media-video-list/media-video-list.component';
+import {MediaPictureList} from '../../components/media-picture-list/media-picture-list.component';
+import {MatTab, MatTabGroup} from '@angular/material/tabs';
 
 
 @Component({
   selector: 'app-media',
   imports: [
-    MediaVideos,
-    TabList,
-    Tab,
-    Tabs,
-    TabPanel,
-    TabContent,
-    MediaPictures
+    MediaVideoList,
+    MediaPictureList,
+    MatTabGroup,
+    MatTab
   ],
   templateUrl: './media.html',
   styleUrl: './media.css',
