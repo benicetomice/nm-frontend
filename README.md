@@ -55,7 +55,7 @@ The architecutre is designed to allow independent development and scaling of fro
 ## Roadmap
 - [x] Angular application setup
 - [x] Core UI structure and routing
-- [ ] Backend project setup (Spring Boot)
+- [x] Backend project setup (Spring Boot)
 - [ ] REST API design
 - [ ] Admin authentication
 - [ ] Content management features
