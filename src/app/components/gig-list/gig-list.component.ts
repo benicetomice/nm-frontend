@@ -18,7 +18,7 @@ export class GigListComponent {
   gigs: Gig[] = [
     {
       date: '2026-01-23', venue: 'Meisenfrei', city: 'Bremen',
-      doors: '19:00', start: '20:00', price: 20, acts: ['Lost Sanctuary', 'Sundance'],
+      doors: '19:00', start: '20:00', price: 0, acts: ['Lost Sanctuary', 'Sundance'],
       flyerImg: '/gigPlakate/2026 01 23 Bremen Meisenfrei.jpg'
     },
     {
