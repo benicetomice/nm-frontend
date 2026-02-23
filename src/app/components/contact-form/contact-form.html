@@ -7,7 +7,7 @@
     </label>
 
     <label>
-      E-Mail
+      Email
       <input type="email" name="email" [(ngModel)]="model.email" required
       email>
     </label>
@@ -18,7 +18,7 @@
     </label>
 
   <button type="submit" [disabled]="!contactForm.valid">
-      Absenden
+      Submit
     </button>
 
   @if (status === 'success') {
