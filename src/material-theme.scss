@@ -4,6 +4,8 @@
 
 :root {
   @include mat.tabs-overrides((
+    active-indicator-color: #998992,
+    active-label-text-color:#998992,
     active-focus-indicator-color: #998992,
     active-focus-label-text-color: #998992,
   ));
