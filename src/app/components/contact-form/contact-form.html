@@ -1,32 +1,46 @@
 <div>
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
 
-<form #contactForm="ngForm" (ngSubmit)="onSubmit()">
-    <label>
-      Name
-      <input type="text" name="name" [(ngModel)]="model.name" required>
-    </label>
+    <table class="input-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="input-full-width">
+            <mat-label>NAME</mat-label>
+            <input matInput value="NAME" name="name" [(ngModel)]="model.name" required>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="input-full-width">
+            <mat-label>EMAIL</mat-label>
+            <input matInput value="EMAIL" name="email" [(ngModel)]="model.email" required>
+            @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+              <mat-error>Please enter a valid email address</mat-error>
+            }
+            @if (emailFormControl.hasError('required')) {
+              <mat-error>Email is <strong>required</strong></mat-error>
+            }
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+    <p>
+      <mat-form-field class="input-full-width">
+        <mat-label>MESSAGE</mat-label>
+        <textarea matInput value="MESSAGE" name="email" [(ngModel)]="model.message" required></textarea>
+      </mat-form-field>
+    </p>
 
-    <label>
-      E-Mail
-      <input type="email" name="email" [(ngModel)]="model.email" required
-      email>
-    </label>
-
-    <label>
-      Message
-      <textarea name="message" [(ngModel)]="model.message" required></textarea>
-    </label>
-
-  <button type="submit" [disabled]="!contactForm.valid">
-      Absenden
+    <button type="submit" [disabled]="!contactForm.valid">
+      SUBMIT
     </button>
 
-  @if (status === 'success') {
-    <p class="snackbar">Nachricht gesendet</p>
-  }
-  @if (status === 'error') {
-    <p class="snackbar">Fehler beim Senden</p>
-  }
+    @if (status === 'success') {
+      <p class="">Message send</p>
+    }
+    @if (status === 'error') {
+      <p class="">Error</p>
+    }
+
   </form>
 
 </div>
