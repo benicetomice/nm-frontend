@@ -57,6 +57,4 @@ export class App implements OnInit {
       ? this.getDeepestRoute(route.firstChild)
       : route;
   }
-
-
 }
