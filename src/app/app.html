@@ -1,6 +1,13 @@
 <main>
   <div class="main">
+    @if (isPhonePortrait) {
+      <div class="burger-nav" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+      <app-burger-menu ></app-burger-menu>
+      </div>
+    }
   <router-outlet></router-outlet>
   </div>
 </main>
+@if (!isPhonePortrait) {
 <app-footer id="footer"></app-footer>
+}
