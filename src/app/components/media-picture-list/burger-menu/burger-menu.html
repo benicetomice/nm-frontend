@@ -1,0 +1,46 @@
+<button matIconButton [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+  <mat-icon>menu</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+    </a>
+  </button>
+  <button mat-menu-item>
+    <a routerLink="/media" routerLinkActive="active">
+    <mat-icon>voicemail</mat-icon>
+    <span>Media</span>
+      </a>
+  </button>
+  <button mat-menu-item>
+    <a routerLink="/live" routerLinkActive="active">
+    <mat-icon>notifications_off</mat-icon>
+    <span>Live</span>
+    </a>
+  </button>
+  <button mat-menu-item>
+    <a routerLink="/contact" routerLinkActive="active">
+      <mat-icon></mat-icon>
+    <span>Contact</span>
+    </a>
+  </button>
+</mat-menu>
+
+<!--  <a routerLink="/live" routerLinkActive="active">-->
+<!--    <h3>Live</h3>-->
+<!--  </a>-->
+
+<!--  &lt;!&ndash;      <a routerLink="/merch" routerLinkActive="active">&ndash;&gt;-->
+<!--  &lt;!&ndash;        <h3>Merch</h3>&ndash;&gt;-->
+<!--  &lt;!&ndash;      </a>&ndash;&gt;-->
+
+<!--  &lt;!&ndash;      <a routerLink="/press" routerLinkActive="active">&ndash;&gt;-->
+<!--  &lt;!&ndash;        <h3>Press</h3>&ndash;&gt;-->
+<!--  &lt;!&ndash;      </a>&ndash;&gt;-->
+
+<!--  <a routerLink="/contact" routerLinkActive="active">-->
+<!--    <h3>Contact</h3>-->
+<!--  </a>-->
+<!--</nav>-->
