@@ -9,4 +9,8 @@
     active-focus-indicator-color: #998992,
     active-focus-label-text-color: #998992,
   ));
+  @include mat.menu-overrides((
+    container-color: #282828,
+    item-label-text-font: var(--font-heading),
+  ));
 }
