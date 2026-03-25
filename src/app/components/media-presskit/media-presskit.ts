@@ -1,11 +1,21 @@
-import {Component} from '@angular/core';
+import {Component, signal} from '@angular/core';
 import {MatButton} from '@angular/material/button';
 import {FileService} from './file-service';
+import {
+  MatAccordion,
+  MatExpansionPanel,
+  MatExpansionPanelHeader,
+  MatExpansionPanelTitle
+} from '@angular/material/expansion';
 
 @Component({
   selector: 'app-media-presskit',
   imports: [
-    MatButton
+    MatButton,
+    MatAccordion,
+    MatExpansionPanel,
+    MatExpansionPanelHeader,
+    MatExpansionPanelTitle,
   ],
   templateUrl: './media-presskit.html',
   styleUrl: './media-presskit.css',
@@ -14,6 +24,8 @@ export class MediaPresskit {
 
   constructor(private fileService: FileService) {
   }
+
+  readonly panelOpenState = signal(false);
 
   downloads = {
     fullPressKit: {
@@ -27,10 +39,6 @@ export class MediaPresskit {
     bandPictures: {
       url: 'downloads/bandPictures.zip',
       name: 'bandPictures',
-    },
-    biography: {
-      url: 'downloads/biography.zip',
-      name: 'biography',
     },
     stageAndTechrider: {
       url: 'downloads/stageAndTechrider.zip',

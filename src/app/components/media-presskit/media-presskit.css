@@ -1,7 +1,9 @@
 .press-kit-container {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
 }
