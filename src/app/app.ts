@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, NavigationEnd, Router, RouterOutlet} from '@angular/router';
 import {Footer} from './components/footer/footer';
 import {filter} from 'rxjs';
-import {BurgerMenu} from './components/media-picture-list/burger-menu/burger-menu';
+import {BurgerMenu} from './components/burger-menu/burger-menu';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {NgClass} from '@angular/common';
 
