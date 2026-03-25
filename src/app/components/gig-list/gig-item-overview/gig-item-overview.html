@@ -1,15 +1,52 @@
 <div class="modal-backdrop" (click)="close.emit()"></div>
+@if (isPhonePortrait) {
+  <div class="modal">
+    <div class="modal-phone-portrait-content">
 
+      <div class="close-container-portrait">
+        <button class="button" (click)="close.emit()">CLOSE</button>
+      </div>
+
+      <div class="top-container">
+
+        @if (gig.flyerImg) {
+          <img class="flyer-portrait" [src]="gig.flyerImg" alt="Flyer Image Not Available"/>
+        }
+
+      </div>
+      <div class="bottom-container">
+
+        <h2>{{ gig.venue }} – {{ gig.city }}</h2>
+
+        <p><strong>Einlass:</strong> {{ gig.doors }}</p>
+        <p><strong>Beginn:</strong> {{ gig.start }}</p>
+        <p><strong>Preis:</strong> {{ gig.price }} €</p>
+
+        @if (gig.acts?.length) {
+          <p><strong>Weitere Acts:</strong></p>
+          <ul>
+            @for (act of gig.acts; track act) {
+              <li>{{ act }}</li>
+            }
+          </ul>
+        }
+
+      </div>
+    </div>
+
+  </div>
+}
+@if (!isPhonePortrait) {
 <div class="modal">
   <div class="modal-content">
     <div class="close-container">
-      <button (click)="close.emit()">×</button>
+      <button class="button" (click)="close.emit()">CLOSE</button>
     </div>
 
     <div class="leftContainer">
 
       @if (gig.flyerImg) {
-        <img [src]="gig.flyerImg" alt="Flyer Image"/>
+        <img class="flyer" [src]="gig.flyerImg" alt="Flyer Image Not Available"/>
       }
 
     </div>
@@ -32,3 +69,4 @@
     </div>
   </div>
 </div>
+}
