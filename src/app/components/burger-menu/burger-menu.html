@@ -1,0 +1,29 @@
+<button matIconButton [matMenuTriggerFor]="menu">
+  <mat-icon>menu</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <mat-icon>home</mat-icon>
+    <span>HOME</span>
+    </a>
+  </button>
+  <button mat-menu-item>
+    <a routerLink="/media" routerLinkActive="active">
+    <mat-icon>image</mat-icon>
+    <span>MEDIA</span>
+      </a>
+  </button>
+  <button mat-menu-item>
+    <a routerLink="/live" routerLinkActive="active">
+    <mat-icon>event</mat-icon>
+    <span>LIVE</span>
+    </a>
+  </button>
+  <button mat-menu-item>
+    <a routerLink="/contact" routerLinkActive="active">
+      <mat-icon>contact_page</mat-icon>
+    <span>CONTACT</span>
+    </a>
+  </button>
+</mat-menu>

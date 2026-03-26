@@ -5,22 +5,28 @@
 }
 
 .modal {
+  font-size: calc(5px + 2vmin);
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: #282828;
   padding: 1.5rem;
-  max-width: 55%;
+  max-width: 70%;
   border-radius: 8px;
   z-index: 1000;
 }
 
+/*Modal Desktop View*/
 .modal-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
   gap: 8px;
+}
+
+.flyer {
+  max-height: 490px;
 }
 
 .close-container {
@@ -39,4 +45,19 @@
 .rightContainer {
   grid-column-start: 2;
   grid-row-start: 2;
+}
+
+/* Modal Phone Portrait */
+.flyer-portrait {
+  max-height: 300px;
+}
+
+.close-container-portrait {
+  position: absolute;
+  top: 0;
+  right: 12px;
+}
+
+.top-container {
+  padding: 12px;
 }

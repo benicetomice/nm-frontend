@@ -1,6 +1,3 @@
-@import "tailwindcss";
-
-
 /* Base */
 
 :root {
@@ -35,13 +32,21 @@ h1 { font-size: 3rem; }
 h2 { font-size: 2.2rem; }
 h3 { font-size: 1.8rem; }
 
+/* Buttons */
+.button {
+  color: #806559;
+  background: none;
+  border: 1px solid #806559;
+  margin: 10px auto;
+}
+
 /* Links */
 
 a {
   color: var(--font-heading);
   text-decoration: none; }
 
-nav a.active, a:hover{
+nav a.active, a:hover, .button:hover{
   color: #998992;
 }
 
@@ -59,7 +64,7 @@ nav a.active, a:hover{
 
 /* Background-Image */
 
-.bg-home, .bg-default {
+.bg-home, .bg-home-portrait, .bg-default {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -70,6 +75,14 @@ nav a.active, a:hover{
   background-image: url("/bg-home.jpg");
 }
 
+.bg-home-portrait {
+  background-image: url("/bg-home-portrait.jpg");
+}
+
 .bg-default {
   background-image: url("/bg-default.jpg");
+}
+
+.bg-default-portrait {
+  background-image: url("/bg-default-portrait.jpg");
 }
