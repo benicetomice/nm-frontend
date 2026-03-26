@@ -12,9 +12,12 @@
   transform: translate(-50%, -50%);
   background: var(--color-background-dark);
   padding: 1.5rem;
-  max-width: 70%;
+  min-width: 70%;
+  max-width: 80%;
   border-radius: 8px;
   z-index: 1000;
+  word-break: break-all;
+
 }
 
 /*Modal Desktop View*/
