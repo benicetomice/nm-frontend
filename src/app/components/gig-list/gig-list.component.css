@@ -1,5 +1,5 @@
 .upcomingGig {
-  color: #969577;
+  color: var(--color-text-light);
 }
 
 hr {
