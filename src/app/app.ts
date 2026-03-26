@@ -25,14 +25,7 @@ export class App implements OnInit {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
-        const activateRoute = this.getDeepestRoute(this.route);
-        const bgClass = activateRoute.snapshot.data['bgClass'];
-
-        document.body.classList.remove('bg-home','bg-default');
-
-        if (bgClass) {
-          document.body.classList.add(bgClass);
-        }
+        this.updateBackground();
       });
   }
 
@@ -43,13 +36,28 @@ export class App implements OnInit {
       Breakpoints.HandsetPortrait,
     ])
       .subscribe(result => {
-
-        this.isPhonePortrait = false;
-
-        if (result.matches) {
-          this.isPhonePortrait = true;
-        }
+        this.isPhonePortrait = result.matches;
+        this.updateBackground();
       });
+  }
+
+  private updateBackground() {
+    const activeRoute = this.getDeepestRoute(this.route);
+    const bgClass = activeRoute.snapshot.data['bgClass'];
+
+    document.body.classList.remove(
+      'bg-home',
+      'bg-home-portrait',
+      'bg-default',
+      'bg-default-portrait'
+    );
+
+    if (bgClass) {
+      const finalclass = this.isPhonePortrait
+        ? `${bgClass}-portrait`
+        : bgClass;
+      document.body.classList.add(finalclass);
+    }
   }
 
   private getDeepestRoute(route: ActivatedRoute): ActivatedRoute {
