@@ -2,7 +2,16 @@
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.7);
-  z-index: 1000;
+  z-index: 9001;
+}
+
+.modal {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  display: flex;
+  z-index: 9002;
 }
 
 .close-container {
@@ -10,22 +19,13 @@
 }
 
 .modal-content {
-  background: rgba(0,0,0,0.7);
+  background: var(--color-background-dark);
   padding: 10px;
-}
-
-.modal {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1001;
 }
 
 .modal img {
   max-width: 90vw;
-  max-height: 50vh;
+  max-height: 40vh;
   display: block;
 }
 
@@ -33,5 +33,3 @@
   text-align: left;
   padding-top: 10px;
 }
-
-

@@ -1,15 +1,16 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, NavigationEnd, Router, RouterOutlet} from '@angular/router';
-import {Footer} from './components/footer/footer';
+import {NavMenu} from './components/nav-menu/nav-menu.component';
 import {filter} from 'rxjs';
 import {BurgerMenu} from './components/burger-menu/burger-menu';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {NgClass} from '@angular/common';
+import {SocialMedia} from './components/social-media/social-media';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Footer, BurgerMenu, NgClass],
+  imports: [RouterOutlet, NavMenu, BurgerMenu, NgClass, SocialMedia],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

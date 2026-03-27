@@ -1,16 +1,99 @@
 @use '@angular/material' as mat;
 
-/* Base */
-
 :root {
+  --color-primary: #806559;
+  --color-text-light: #998992;
+  --color-text-very-light: #969577; //outdated?
+  --color-background-dark: #282828;
+
+  --font-base: 'Libre Baskerville', serif;
+  --font-heading: 'Libre Baskerville', serif;
+
   @include mat.tabs-overrides((
-    active-indicator-color: #998992,
-    active-label-text-color:#998992,
-    active-focus-indicator-color: #998992,
-    active-focus-label-text-color: #998992,
+    active-indicator-color: var(--color-primary),
+    active-label-text-color:var(--color-primary),
+    active-focus-indicator-color: var(--color-primary),
+    active-focus-label-text-color: var(--color-primary),
   ));
   @include mat.menu-overrides((
-    container-color: #282828,
+    container-color: var(--color-background-dark),
     item-label-text-font: var(--font-heading),
   ));
+}
+
+body {
+  font-family: var(--font-base), 'sans-serif';
+  color: var(--color-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), 'serif';
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+  margin: 0.5em 0;
+}
+
+/* Fuer Uberschriften & Navigation */
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+a {
+  color: var(--color-text-main);
+  text-decoration: none;
+}
+
+a.active, a:hover, .button:hover {
+  color: var(--color-text-light);
+}
+
+.button {
+  color: var(--color-primary);
+  background: none;
+  border: 1px solid var(--color-primary);
+  margin: 10px auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 10vh;
+}
+
+/* Background-Images */
+
+.bg-home, .bg-home-portrait, .bg-default, .bg-default-portrait {
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-home {
+  background-image: url("/bg-home-gradient.jpg");
+}
+
+.bg-home-portrait {
+  background-image: url("/bg-home-portrait.jpg");
+}
+
+.bg-default {
+  background-image: url("/bg-default.jpg");
+}
+
+.bg-default-portrait {
+  background-image: url("/bg-default-portrait.jpg");
 }
