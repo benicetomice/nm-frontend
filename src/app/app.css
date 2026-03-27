@@ -2,3 +2,17 @@ burger-nav .is-phone-portrait{
   margin: 0;
   padding: 0;
 }
+
+.bottom-container {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  z-index: 9000;
+}
+
+/*.gradient {*/
+/*  bottom: 0;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.25) 75%, rgba(0, 0, 0, 0.05) 100%);*/
+/*}*/

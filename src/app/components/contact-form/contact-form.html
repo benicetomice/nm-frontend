@@ -1,28 +1,21 @@
 <div>
   <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
 
-    <table class="input-full-width" cellspacing="0">
-      <tr>
-        <td>
-          <mat-form-field class="input-full-width">
-            <mat-label>NAME</mat-label>
-            <input matInput value="NAME" name="name" [(ngModel)]="model.name" required>
-          </mat-form-field>
-        </td>
-        <td>
-          <mat-form-field class="input-full-width">
-            <mat-label>EMAIL</mat-label>
-            <input matInput value="EMAIL" name="email" [(ngModel)]="model.email" required>
-            @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
-              <mat-error>Please enter a valid email address</mat-error>
-            }
-            @if (emailFormControl.hasError('required')) {
-              <mat-error>Email is <strong>required</strong></mat-error>
-            }
-          </mat-form-field>
-        </td>
-      </tr>
-    </table>
+    <mat-form-field class="input-full-width">
+      <mat-label>NAME</mat-label>
+      <input matInput value="NAME" name="name" [(ngModel)]="model.name" required>
+    </mat-form-field>
+
+    <mat-form-field class="input-full-width">
+      <mat-label>EMAIL</mat-label>
+      <input matInput value="EMAIL" name="email" [(ngModel)]="model.email" required>
+      @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+        <mat-error>Please enter a valid email address</mat-error>
+      }
+      @if (emailFormControl.hasError('required')) {
+        <mat-error>Email is <strong>required</strong></mat-error>
+      }
+    </mat-form-field>
     <p>
       <mat-form-field class="input-full-width">
         <mat-label>MESSAGE</mat-label>
@@ -30,7 +23,7 @@
       </mat-form-field>
     </p>
 
-    <button type="submit" [disabled]="!contactForm.valid">
+    <button class="button" type="submit" [disabled]="!contactForm.valid">
       SUBMIT
     </button>
 

@@ -2,14 +2,14 @@ import {Component} from '@angular/core';
 import {RouterLink, RouterLinkActive} from '@angular/router';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-nav-menu',
   imports: [
     RouterLink,
     RouterLinkActive
   ],
-  templateUrl: './footer.html',
-  styleUrl: './footer.css',
+  templateUrl: './nav-menu.component.html',
+  styleUrl: './nav-menu.component.css',
 })
-export class Footer {
+export class NavMenu {
 
 }
