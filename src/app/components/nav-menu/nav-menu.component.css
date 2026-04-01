@@ -1,9 +1,10 @@
-.nav{
+.nav-links{
   display: flex;
   flex-direction: row;
   justify-content: center;
+
 }
 
-.nav a{
+.nav-links a{
   padding: 10px 23px 10px 10px;
 }

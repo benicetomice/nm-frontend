@@ -1,13 +1,16 @@
+
 @if (isPhonePortrait) {
   <div class="burger-nav" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
     <app-burger-menu ></app-burger-menu>
   </div>
 }
 <main>
-  <div class="main">
-  <router-outlet></router-outlet>
-  </div>
 
+  <div class="fade-out">
+    <div class="main">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
   <div class="bottom-container">
     <app-social-media></app-social-media>
     @if (!isPhonePortrait) {
@@ -15,3 +18,4 @@
     }
   </div>
 </main>
+
