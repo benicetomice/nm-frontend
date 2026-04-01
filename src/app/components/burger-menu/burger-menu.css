@@ -1,0 +1,7 @@
+div {
+  position: fixed;
+  width: 98%;
+  top: 10px;
+  z-index: 999;
+  background-color: var(--color-background-dark);
+}
