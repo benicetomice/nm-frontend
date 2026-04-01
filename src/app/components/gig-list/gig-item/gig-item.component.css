@@ -1,8 +1,8 @@
 .gigDate {
-  font-size: calc(8px + 2vmin);
+  font-size: calc(8px + 1.5vmin);
+  padding: calc(2px + 1vmin);
   font-weight: 300;
   text-transform: uppercase;
-  word-break: break-all;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);

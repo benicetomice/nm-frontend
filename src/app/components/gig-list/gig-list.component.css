@@ -1,9 +1,9 @@
-.upcomingGig {
-  color: var(--color-text-light);
+.upcoming {
+  color: var(--color-text-very-light);
 }
 
 hr {
-  border-color: #785444;
+  border-color: var(--color-primary);
   margin: 20px auto;
   width: 50%;
 }
