@@ -1,14 +1,12 @@
 import {Injectable} from '@angular/core';
 import {HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
-import {Router} from '@angular/router';
+import {catchError, throwError} from 'rxjs';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
 
-  constructor(private router: Router) {
-  }
-
   intercept(req: HttpRequest<any>, next: HttpHandler) {
+
     const token = localStorage.getItem('token');
 
     if (token) {
@@ -19,6 +17,14 @@ export class AuthInterceptor implements HttpInterceptor {
       });
     }
 
-    return next.handle(req);
+    return next.handle(req).pipe(
+      catchError(err => {
+        if (err.status === 401) {
+          localStorage.removeItem('token');
+          window.location.href = '/login';
+        }
+        return throwError(() => err);
+      })
+    );
   }
 }
