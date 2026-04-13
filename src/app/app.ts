@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, NavigationEnd, Router, RouterOutlet} from '@angular/router';
 import {NavMenu} from './components/nav-menu/nav-menu.component';
-import {filter} from 'rxjs';
+import {combineLatest, filter, Subject, takeUntil} from 'rxjs';
 import {BurgerMenu} from './components/burger-menu/burger-menu';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {NgClass} from '@angular/common';
@@ -14,37 +14,55 @@ import {SocialMedia} from './components/social-media/social-media';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App implements OnInit {
+export class App implements OnInit, OnDestroy {
 
+  title: string = '';
   isPhonePortrait = false;
+
+  private destroy$ = new Subject<void>();
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private responsive: BreakpointObserver) {
-
-    this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe(() => {
-        this.updateBackground();
-      });
   }
 
   ngOnInit() {
-
-    this.responsive.observe([
-      Breakpoints.HandsetLandscape,
-      Breakpoints.HandsetPortrait,
+    combineLatest([
+      this.router.events.pipe(
+        filter(event => event instanceof NavigationEnd)
+      ),
+      this.responsive.observe([
+        Breakpoints.HandsetLandscape,
+        Breakpoints.HandsetPortrait,
+      ])
     ])
-      .subscribe(result => {
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(([_, result]) => {
         this.isPhonePortrait = result.matches;
-        this.updateBackground();
+
+        const data = this.getActiveRouteData();
+
+        this.title = data['title'] || '';
+        this.updateBackground(data);
       });
   }
 
-  private updateBackground() {
-    const activeRoute = this.getDeepestRoute(this.route);
-    const bgClass = activeRoute.snapshot.data['bgClass'];
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
+
+  private getActiveRouteData() {
+    let route = this.route;
+    while (route.firstChild) {
+      route = route.firstChild;
+    }
+    return route.snapshot.data;
+  }
+
+  private updateBackground(data: { bgClass?: string }) {
+      const bgClass = data['bgClass'];
 
     document.body.classList.remove(
       'bg-home',
@@ -57,13 +75,8 @@ export class App implements OnInit {
       const finalclass = this.isPhonePortrait
         ? `${bgClass}-portrait`
         : bgClass;
+
       document.body.classList.add(finalclass);
     }
-  }
-
-  private getDeepestRoute(route: ActivatedRoute): ActivatedRoute {
-    return route.firstChild
-      ? this.getDeepestRoute(route.firstChild)
-      : route;
   }
 }
