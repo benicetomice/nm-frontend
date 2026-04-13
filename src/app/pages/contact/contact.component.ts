@@ -14,5 +14,4 @@ import {ContactForm} from '../../components/contact-form/contact-form';
   styleUrl: './contact.component.css',
 })
 export class Contact {
-
 }
