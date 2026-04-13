@@ -27,12 +27,6 @@ export class App implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private responsive: BreakpointObserver,
     private authService: AuthService) {
-
-    this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe(() => {
-        this.updateBackground();
-      });
   }
 
   ngOnInit() {
