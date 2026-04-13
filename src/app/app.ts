@@ -6,6 +6,7 @@ import {BurgerMenu} from './components/burger-menu/burger-menu';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {NgClass} from '@angular/common';
 import {SocialMedia} from './components/social-media/social-media';
+import {AuthService} from './services/auth-service';
 
 @Component({
   selector: 'app-root',
@@ -24,10 +25,20 @@ export class App implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private responsive: BreakpointObserver) {
+    private responsive: BreakpointObserver,
+    private authService: AuthService) {
   }
 
   ngOnInit() {
+    setInterval(() => {
+      const token = localStorage.getItem('token');
+
+      if (token && this.authService.isTokenExpired(token)) {
+        localStorage.removeItem('token');
+        this.router.navigate(['/login']);
+      }
+    }, 60000);
+
     combineLatest([
       this.router.events.pipe(
         filter(event => event instanceof NavigationEnd)
