@@ -9,3 +9,16 @@ burger-nav .is-phone-portrait{
   width: 100%;
   z-index: 9000;
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  min-height:80.5vh;
+  margin-top: 5vh;
+}
+
+.fade-out {
+  mask-image: linear-gradient(to bottom, black var(--fade-amount), black calc(100% - var(--fade-amount)), transparent);
+}

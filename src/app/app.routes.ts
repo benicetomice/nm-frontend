@@ -14,38 +14,32 @@ export const routes: Routes = [
   {
     path: '',
     component: Home,
-    title: 'Home',
-    data: { bgClass: 'bg-home' }
+    data: { title: 'Home', bgClass: 'bg-home' }
   },
   {
     path: 'media',
     component: Media,
-    title: 'Media',
-    data: { bgClass: 'bg-default' }
+    data: { title: 'Media', bgClass: 'bg-default' }
   },
   {
     path: 'live',
     component: Live,
-    title: 'Live',
-    data: { bgClass: 'bg-default' }
+    data: { title: 'Live', bgClass: 'bg-default' }
   },
   {
     path: 'merch',
     component: Merch,
-    title: 'Merch',
-    data: { bgClass: 'bg-default' }
+    data: { title: 'Merch', bgClass: 'bg-default' }
   },
   {
     path: 'press',
     component: Press,
-    title: 'Press',
-    data: { bgClass: 'bg-default' }
+    data: { title: 'Press',bgClass: 'bg-default' }
   },
   {
     path: 'contact',
     component: Contact,
-    title: 'Contact',
-    data: { bgClass: 'bg-default' }
+    data: { title: 'Contact',bgClass: 'bg-default' }
   },
   {
     path: 'login',
@@ -63,7 +57,6 @@ export const routes: Routes = [
   {
     path: '**',
     component: NotFound,
-    title: 'Page Not Found',
-    data: { bgClass: 'bg-default' }
+    data: { title: 'Page Not Found', bgClass: 'bg-default' }
   }
 ];

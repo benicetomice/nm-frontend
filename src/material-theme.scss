@@ -3,8 +3,9 @@
 :root {
   --color-primary: #806559;
   --color-text-light: #998992;
-  --color-text-very-light: #969577; //outdated?
+  --color-text-very-light: #969577;
   --color-background-dark: #282828;
+  --fade-amount: 25%;
 
   --font-base: 'Libre Baskerville', serif;
   --font-heading: 'Libre Baskerville', serif;
@@ -64,15 +65,6 @@ a.active, a:hover, .button:hover {
   margin: 10px auto;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  min-height: 80vh;
-  text-align: center;
-  padding: 2rem;
-  margin-top: 10vh;
-}
-
 /* Background-Images */
 
 .bg-home, .bg-home-portrait, .bg-default, .bg-default-portrait {
@@ -83,7 +75,7 @@ a.active, a:hover, .button:hover {
 }
 
 .bg-home {
-  background-image: url("/bg-home-gradient.jpg");
+  background-image: url("/bg-home.jpg");
 }
 
 .bg-home-portrait {
