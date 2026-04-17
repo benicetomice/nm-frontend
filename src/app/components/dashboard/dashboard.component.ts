@@ -1,4 +1,4 @@
-import {Component, OnChanges} from '@angular/core';
+import {Component} from '@angular/core';
 import {GigService} from '../../services/GigService';
 import {Gig} from '../gig.model';
 import {Router, RouterLink, RouterOutlet} from '@angular/router';
