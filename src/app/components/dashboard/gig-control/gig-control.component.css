@@ -1,0 +1,7 @@
+.gigRow {
+  text-transform: uppercase;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /*gap: 21px;*/
+}
