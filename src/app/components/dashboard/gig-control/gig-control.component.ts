@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {Gig} from '../../gig.model';
 import {GigService} from '../../../services/GigService';
 import {DatePipe} from '@angular/common';
-import {FormGroup, FormsModule} from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 import {GigForm} from '../../gig-form/gig-form';
 
 @Component({
