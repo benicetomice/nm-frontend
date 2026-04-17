@@ -9,8 +9,8 @@
 
       <div class="top-container">
 
-        @if (gig.flyerImg) {
-          <img class="flyer-portrait" [src]="gig.flyerImg" alt="Flyer Image Not Available"/>
+        @if (gig.imageUrl) {
+          <img class="flyer-portrait" [src]="gig.imageUrl" alt="Flyer Image Not Available"/>
         }
 
       </div>
@@ -45,8 +45,8 @@
 
     <div class="leftContainer">
 
-      @if (gig.flyerImg) {
-        <img class="flyer" [src]="gig.flyerImg" alt="Flyer Image Not Available"/>
+      @if (gig.imageUrl) {
+        <img class="flyer" [src]="gig.imageUrl" alt="Flyer Image Not Available"/>
       }
 
     </div>

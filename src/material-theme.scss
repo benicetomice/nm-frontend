@@ -2,7 +2,7 @@
 
 :root {
   --color-primary: #806559;
-  --color-text-light: #998992;
+  --color-secondary: #998992;
   --color-text-very-light: #969577;
   --color-background-dark: #282828;
   --fade-amount: 25%;
@@ -55,7 +55,7 @@ a {
 }
 
 a.active, a:hover, .button:hover {
-  color: var(--color-text-light);
+  color: var(--color-secondary);
 }
 
 .button {

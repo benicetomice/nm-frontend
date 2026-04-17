@@ -1,16 +1,16 @@
 export interface Gig {
 
+  id?: number;
+
+  title?: string;
+
   date: string; // ISO: "2026-03-14"
   city: string;
   venue: string;
 
-  doors: string;
-  start: string;
-
-  price: number;
-
+  doors?: string;
+  start?: string;
+  price?: number;
   acts?: string[];
-
-  flyerImg: string;
-
+  imageUrl?: string;
 }
