@@ -1,0 +1,77 @@
+<div class="modal-backdrop"></div>
+<div class="modal">
+  <div class="modal-content">
+    <div class="close-container">
+      <button class="button" (click)="cancel.emit()">CLOSE</button>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+      <mat-form-field class="input-full-width">
+        <mat-label>Image URL</mat-label>
+        <input matInput formControlName="imageUrl" placeholder="Image URL">
+      </mat-form-field>
+
+      <mat-form-field class="input-full-width">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title" placeholder="Title">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Date</mat-label>
+        <input matInput formControlName="date" type="date">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>City</mat-label>
+        <input matInput formControlName="city" placeholder="City">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Venue</mat-label>
+        <input matInput formControlName="venue" placeholder="Venue">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Doors</mat-label>
+        <input matInput formControlName="doors" placeholder="Doors">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Start</mat-label>
+        <input matInput formControlName="start" placeholder="Start">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Price</mat-label>
+        <input matInput formControlName="price" type="number" placeholder="Price">
+      </mat-form-field>
+
+      <div formArrayName="acts">
+
+          @for (act of acts.controls; let i = $index; track i) {
+
+            <div>
+              <mat-form-field class="input-full-width">
+                <mat-label>Act</mat-label>
+                <input matInput value="acts" name="acts" [formControlName]="i" placeholder="Act">
+              </mat-form-field>
+
+              <button class="button" type="button" (click)="removeAct(i)">
+                Remove
+              </button>
+            </div>
+
+          }
+
+      </div>
+
+      <button class="button" type="button" (click)="addAct()">+ Add Act</button>
+
+      <br>
+
+      <button class="button" type="submit">Save</button>
+      <button class="button" type="button" (click)="cancel.emit()">Cancel</button>
+
+    </form>
+  </div>
+</div>
