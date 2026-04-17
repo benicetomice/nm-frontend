@@ -35,7 +35,7 @@ export class GigForm implements OnInit {
       start: [this.gig?.start || ''],
       price: [this.gig?.price || null],
       acts: this.fb.array([]),
-      imageUrl: [this.gig?.flyerImg || '']
+      imageUrl: [this.gig?.imageUrl || '']
     });
     this.initActs();
   }
