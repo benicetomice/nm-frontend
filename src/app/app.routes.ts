@@ -7,11 +7,8 @@ import {Press} from './pages/press/press';
 import {Contact} from './pages/contact/contact.component';
 import {NotFound} from './pages/not-found/not-found';
 import {Login} from './pages/login/login';
-import {Dashboard} from './components/dashboard/dashboard.component';
+import {Dashboard} from './pages/dashboard/dashboard';
 import {AuthGuard} from './guards/auth-guard';
-import {DashboardOverview} from './components/dashboard/dashboard-home/dashboard.component';
-import {GigControl} from './components/dashboard/gig-control/gig-control.component';
-import {GalleryControl} from './components/dashboard/gallery-control/gallery-control';
 
 export const routes: Routes = [
   {
@@ -45,32 +42,17 @@ export const routes: Routes = [
     data: { title: 'Contact',bgClass: 'bg-default' }
   },
   {
-    path: 'dashboard',
-    canActivate: [AuthGuard],
-    component: Dashboard,
-    data: {title: 'Dashboard', bgClass: 'bg-default'},
-    children: [
-      {
-        path: '',
-        component: DashboardOverview,
-        data: { title: 'Dashboard', bgClass: 'bg-default' }
-      },
-      {
-        path: 'gigs',
-        component: GigControl,
-        data: { title: 'Gig Control', bgClass: 'bg-default' }
-      },
-      {
-        path: 'gallery',
-        component: GalleryControl,
-        data: { title: 'Gallery Control', bgClass: 'bg-default' }
-      }
-    ]
-  },
-  {
     path: 'login',
     component: Login,
-    data: {title: 'Login', bgClass: 'bg-default'}
+    title: 'Login',
+    data: { bgClass: 'bg-default' }
+  },
+  {
+    path: 'dashboard',
+    component: Dashboard,
+    title: 'Dashboard',
+    canActivate: [AuthGuard],
+    data: { bgClass: 'bg-default' }
   },
   {
     path: '**',
