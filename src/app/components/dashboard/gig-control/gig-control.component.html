@@ -1,0 +1,23 @@
+<button class="button" (click)="createGig()">+ Add Gig</button>
+
+@for (gig of gigs; track gig.id) {
+  <div class="gigRow">
+    <div>{{ gig.date | date:'dd/MM/yyyy' }}</div>
+    <div>{{ gig.venue }}</div>
+    <div>{{ gig.city }}</div>
+
+    <button class="button" (click)="editGig(gig)">Edit</button>
+    <button class="button" (click)="delete(gig.id!)">Delete</button>
+  </div>
+}
+
+@if (isModalOpen) {
+  <div class="modal">
+    <app-gig-form
+      [gig]="selectedGig"
+      (save)="saveGig($event)"
+      (cancel)="isModalOpen = false">
+    </app-gig-form>
+  </div>
+}
+

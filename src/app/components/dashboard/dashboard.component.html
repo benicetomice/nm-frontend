@@ -1,0 +1,19 @@
+<div class="dashboard">
+
+  <aside class="sidebar">
+
+    <a routerLink="/dashboard">Overview</a>
+    <a routerLink="/dashboard/gigs">Gigs</a>
+    <a routerLink="/dashboard/gallery">Gallery</a>
+
+    <button class="button" (click)="logout()">Logout</button>
+  </aside>
+
+  <div class="main">
+
+    <section class="content">
+      <router-outlet></router-outlet>
+    </section>
+
+  </div>
+</div>

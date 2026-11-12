@@ -1,0 +1,28 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 9001;
+}
+
+.modal {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  display: flex;
+  z-index: 9002;
+}
+
+.close-container {
+  text-align: right;
+}
+
+.modal-content {
+  background: var(--color-background-dark);
+  padding: 10px;
+}
+
+.input-full-width {
+  width: 50%;
+}

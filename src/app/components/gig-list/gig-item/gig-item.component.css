@@ -11,5 +11,5 @@
 
 .gigDate:hover {
   cursor: pointer;
-  color: var(--color-text-light);
+  color: var(--color-secondary);
 }
